@@ -1,0 +1,97 @@
+
+
+.border-animation {
+  --bg: #ffffff; /* default white background */
+  border: 3px solid #0000 !important;
+  background:
+    linear-gradient(var(--bg), var(--bg)) padding-box,
+    linear-gradient(var(--angle), #13c8ec, #687aff) border-box;
+  animation: rotate 3s linear infinite;
+}
+
+.border-animation:hover {
+  --bg: #13c8ec; /* light blue background on hover */
+}
+
+.border-agent-animation {
+  --bg: #ffffff; /* default white background */
+  border: 3px solid #0000 !important; 
+  background:
+    linear-gradient(var(--bg), var(--bg)) padding-box,
+    linear-gradient(var(--angle), #13c8ec, #687aff) border-box;
+  animation: rotate 3s linear infinite;
+}
+
+.text-animation {
+    background: linear-gradient(
+        to right,
+        #7953cd 20%,
+        #00affa 30%,
+        #0190cd 70%,
+        #764ada 80%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    background-size: 500% auto;
+    animation: textShine 5s ease-in-out infinite alternate;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+@keyframes rotate {
+  to {
+    --angle: 360deg;
+  }
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+
+@keyframes textShine {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
